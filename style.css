@@ -1,0 +1,13 @@
+:root {
+  --bg: #000000;
+  --surface: #0a0f1a;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --accent: #34d399;
+  --blue: #60a5fa;
+  --yellow: #fbbf24;
+  --border: #1e293b;
+  --cursor: #34d399;
+}
+
+/* alle andere stijlen: body, header, .prompt, .cursor, main, h1, .progress, .services, .card, #terminal, #ai-chat-container, etc. */

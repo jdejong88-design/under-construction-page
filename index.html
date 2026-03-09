@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Under Construction – [Jouw Naam / Bedrijf]</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f8f9fa;          /* licht voor djlabs-achtige cleane look */
+      --text: #0f172a;
+      --accent: #3b82f6;      /* blauw accent zoals vaak bij tech sites */
+      --muted: #64748b;
+      --border: #e2e8f0;
+    }
+    /* Donkere variant? uncomment dan dit blok */
+    /*
+    :root {
+      --bg: #0f172a;
+      --text: #e2e8f0;
+      --accent: #60a5fa;
+      --muted: #94a3b8;
+      --border: #334155;
+    }
+    body { background: var(--bg); color: var(--text); }
+    */
+
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header.terminal {
+      background: #111827;
+      color: #a5b4fc;
+      font-family: 'JetBrains Mono', monospace;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #334155;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .prompt {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 1rem;
+    }
+
+    .prompt span.user { color: #34d399; }
+    .prompt span.host { color: #60a5fa; }
+    .status {
+      margin-left: auto;
+      font-size: 0.9rem;
+      color: #6ee7b7;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .status span { white-space: nowrap; }
+
+    main {
+      flex: 1;
+      max-width: 1100px;
+      margin: 4rem auto 6rem;
+      padding: 0 1.5rem;
+    }
+
+    h1 {
+      font-size: 3.2rem;
+      font-weight: 700;
+      margin-bottom: 1.2rem;
+      color: var(--accent);
+    }
+
+    .tagline {
+      font-size: 1.4rem;
+      color: var(--muted);
+      margin-bottom: 3rem;
+    }
+
+    .construction {
+      font-family: 'JetBrains Mono', monospace;
+      background: rgba(59,130,246,0.08);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 2rem 0 4rem;
+      color: var(--muted);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.8rem;
+      margin: 4rem 0;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.8rem;
+      transition: all 0.2s ease;
+    }
+    .card:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(59,130,246,0.12);
+    }
+
+    .card h3 {
+      color: var(--accent);
+      margin-bottom: 1rem;
+      font-size: 1.35rem;
+    }
+
+    .card ul {
+      list-style: none;
+      color: var(--muted);
+    }
+    .card li:before {
+      content: "→ ";
+      color: var(--accent);
+      margin-right: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 3rem 1rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 640px) {
+      h1 { font-size: 2.6rem; }
+      main { margin: 3rem auto 4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="terminal">
+  <div class="prompt">
+    <span class="user">jouwnaam</span>@<span class="host">laptop</span> <span style="color:#fbbf24">~</span> <span style="color:var(--accent)">$</span>
+    <span>building new site...</span>
+  </div>
+  <div class="status">
+    <span>BUILD │ v0.9.3 │ 68% complete</span>
+    <span>LIVE SOON ★</span>
+  </div>
+</header>
+
+<main>
+  <h1>Under Construction</h1>
+  <p class="tagline">We bouwen een strakke nieuwe thuisbasis – bijna klaar om live te gaan!</p>
+
+  <div class="construction">
+    <strong>Progress:</strong> frontend afgerond • design gefinetuned • back-end integraties bezig<br>
+    Verwachte live datum: binnenkort ™
+  </div>
+
+  <h2 style="font-size:2rem; margin:4rem 0 2rem; color:var(--text);">Wat ik voor je kan bouwen</h2>
+
+  <div class="services-grid">
+    <div class="card">
+      <h3>Website Design</h3>
+      <ul>
+        <li>Complete lay-out & visual design</li>
+        <li>UI/UX Design (gebruiksvriendelijk & conversiegericht)</li>
+        <li>Grafische elementen, iconen, huisstijl</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Front-end Development</h3>
+      <ul>
+        <li>HTML • CSS • JavaScript / TypeScript</li>
+        <li>Responsive & performant</li>
+        <li>Moderne frameworks (React / Next.js / Vue optioneel)</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Back-end & Integraties</h3>
+      <ul>
+        <li>Databases & server-logica</li>
+        <li>WordPress / headless CMS</li>
+        <li>API koppelingen & custom functionaliteit</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Onderhoud & Upgrades</h3>
+      <ul>
+        <li>Bestaande sites updaten & optimaliseren</li>
+        <li>Bug fixing & performance tuning</li>
+        <li>Veiligheid & maandelijks onderhoud</li>
+      </ul>
+    </div>
+  </div>
+
+  <p style="text-align:center; margin:5rem 0 2rem; font-size:1.3rem; color:var(--muted);">
+    Wil je alvast sparren over jouw project?<br>
+    Stuur me gerust een bericht via <a href="mailto:jouw@email.nl" style="color:var(--accent); text-decoration:underline;">jouw@email.nl</a>
+    of <a href="https://instagram.com/jouwnaam" style="color:var(--accent);">Instagram</a>
+  </p>
+</main>
+
+<footer>
+  © 2026 [Jouw Naam] — Crafting clean & fast websites
+</footer>
+
+</body>
+</html>
